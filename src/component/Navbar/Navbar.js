@@ -35,16 +35,6 @@ const Navbar = () => {
         <ul class="menu menu-horizontal p-0">
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/info'>Profile</Link></li>
-          <li tabindex="0">
-            <a>
-              Parent
-              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-            </a>
-            <ul class="p-2 bg-base-100">
-              <li><Link to=''>Information</Link></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
           <li>{user ? <button class="btn btn-ghost" onClick={logout} >{user?.displayName}    SIGN OUT</button> : <Link to="/login">Login</Link>}</li>
         </ul>
 
