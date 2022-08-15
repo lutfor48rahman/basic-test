@@ -38,9 +38,9 @@ const AddDoctor = () => {
     }
     return (
         <div >
-            <h2 className="text-2xl flex justify-center mt-10">Add User Information</h2>
-            <div className='flex h-screen justify-center items-center mt-0'>
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <h2 className="text-2xl flex justify-center mt-5">Add User Information</h2>
+            <div className='flex h-screen justify-center items-center'>
+                <form className='mt-0' onSubmit={handleSubmit(onSubmit)}>
 
 
                     <div class="form-control w-full max-w-xs">
