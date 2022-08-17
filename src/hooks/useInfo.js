@@ -4,7 +4,7 @@ const useInfo = () =>{
     const [info,setInfo] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/information')
+        fetch('https://mysterious-brook-81821.herokuapp.com/information')
         .then(res=>res.json())
         .then(data=>setInfo(data));
     },[])

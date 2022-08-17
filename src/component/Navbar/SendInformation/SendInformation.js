@@ -6,7 +6,7 @@ import Loading from '../Loading';
 
 const AddDoctor = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: names, isLoading } = useQuery('names', () => fetch('http://localhost:5000/name').then(res => res.json()))
+    const { data: names, isLoading } = useQuery('names', () => fetch('https://mysterious-brook-81821.herokuapp.com/name').then(res => res.json()))
 
     const onSubmit = async data => {
         const info = {
@@ -16,7 +16,7 @@ const AddDoctor = () => {
             position: data.position
         }
 
-        fetch('http://localhost:5000/information', {
+        fetch('https://mysterious-brook-81821.herokuapp.com/information', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

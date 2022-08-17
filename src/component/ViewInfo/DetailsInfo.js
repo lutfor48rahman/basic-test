@@ -13,7 +13,7 @@ const DetailsInfo = (props) => {
         // console.log(e);
 
         axios({
-            url: "http://localhost:5000/download",
+            url: "https://mysterious-brook-81821.herokuapp.com/download",
             // method: "GET",
             // headers:{
             //     'content-type':'application/pdf'
