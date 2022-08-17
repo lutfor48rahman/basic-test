@@ -78,7 +78,7 @@ const AddDoctor = () => {
                         />
                         <label class="label">
                             {errors.email?.type === 'required' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
-                            {errors.email?.type === 'pattern' && <span class="label-text-alt">{errors.email.message}</span>}
+                            {errors.email?.type === 'pattern' && <span class="label-text-alt text-red-500">{errors.email.message}</span>}
                         </label>
 
                         <label class="label">
@@ -91,9 +91,17 @@ const AddDoctor = () => {
                                 required: {
                                     value: true,
                                     message: 'Phone is required'
+                                },
+                                pattern: {
+                                    value: /^(?:\+88|88)?(01[3-9]\d{8})$/,
+                                    message: 'Provide a vailid input'
                                 }
                             })}
                         />
+                         <label class="label">
+                            {errors.phone?.type === 'required' && <span class="label-text-alt text-red-500">{errors.phone.message}</span>}
+                            {errors.phone?.type === 'pattern' && <span class="label-text-alt text-red-500">{errors.phone.message}</span>}
+                        </label>
 
                         <label class="label">
                             <span class="label-text">Position</span>
